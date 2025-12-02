@@ -36,5 +36,6 @@ def predict():
     except Exception as e:
         return render_template("index.html", result="Error: Invalid input")
 
-# For Vercel serverless deployment
-# The app instance is automatically detected and used
+if __name__ == "__main__":
+    # Local development server
+    app.run(debug=True, host="127.0.0.1", port=5000)
